@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/usersListFragment">
+
+    <fragment
+        android:id="@+id/usersListFragment"
+        android:name="com.example.usersandposts.views.UsersListFragment"
+        android:label="fragment_users_list"
+        tools:layout="@layout/fragment_users_list" >
+        <action
+            android:id="@+id/action_usersListFragment_to_userPostListFragment"
+            app:destination="@id/userPostListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userPostListFragment"
+        android:name="com.example.usersandposts.views.UserPostListFragment"
+        android:label="UserPostListFragment"
+        tools:layout="@layout/fragment_user_post_list"
+        >
+        <action
+            android:id="@+id/action_userPostListFragment_to_userPostDetails"
+            app:destination="@id/userPostDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/userPostDetails"
+        android:name="com.example.usersandposts.views.UserPostDetails"
+        android:label="fragment_user_post_details"
+        tools:layout="@layout/fragment_user_post_details" />
+</navigation>
