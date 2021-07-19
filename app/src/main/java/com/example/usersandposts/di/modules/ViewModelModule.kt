@@ -8,6 +8,7 @@ import com.example.usersandposts.viewmodels.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import javax.inject.Singleton
 
 @Module
 abstract class ViewModelModule {
@@ -19,7 +20,6 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(UsersListFragmentViewModel::class)
     internal abstract fun UsersListFragmentViewModel(viewModel: UsersListFragmentViewModel): ViewModel
-
 
     //Add more ViewModels here
 }

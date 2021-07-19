@@ -19,10 +19,10 @@ class UsersListFragmentViewModel @Inject constructor (
         viewModelScope.launch {
             val result = repository.getUsers()
             if(result.isSuccessful){
-                Log.d("usesList", result.body().toString())
+//                Log.d("usesList", result.body().toString())
                 response.value = result.body()
             } else {
-                Log.d("usesList", result.errorBody().toString())
+//                Log.d("usesList", result.errorBody().toString())
             }
         }
     }
